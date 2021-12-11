@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Introdução a criação de websites com HTML5 e CSS3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="title_container">
+        <img src="img/html-css.png" alt="Ilustração com logos do HTML5 e CSS3" class="logo" />
+        <h1 id="title">Introdução a criação de websites com HTML5 e CSS3</h1>
+    </header>
+    <section class="topics_container">
+        <header>
+            <h2 class="subtitle">HTML5</h2>
+        </header>
+        <article class="topic">
+            <header>
+                <h3 class="topic_title">Definição e estrutura básica</h3>
+                <img src="img/html-code.jpg" alt="Exemplo de código HMTL" class="topic_image">
+            </header>
+            <p class="topic_content">
+                A primeira linha do documento deve ser o <!DOCTYPE html>, apesar de parecer um elemento HTML ela apenas diz ao navegador que ele está lidando com um arquivo do tipo HTML5. Os elementos HTML vem logo abaixo.
+            </p>
+            <p class="topic_subtitle">
+                <strong>&lthtml&gt</strong>
+            </p>
+            <p class="topic_content">
+                A tag html é a raiz do seu documento, todos os elementos HTML devem estar dentro dela. E nela nós informamos ao navegador qual é o idioma desse nosso documento, através do atributo lang, para o português brasileiro usamos pt-BR.
+            </p>
+            <p class="topic_subtitle">
+                <strong>&lthead&gt</strong>
+            </p>
+            <p class="topic_content">
+                A tag head contém elementos que serão lidos pelo navegador, como os metadados - um exemplo é o charset, que é a codificação de caracteres e a mais comum é a UTF-8, o JavaScript com a tag script, o CSS através das tags style e link - veremos a diferença quando falarmos sobre CSS - e o título da página com a tag title.          
+            </p>
+            <p class="topic_subtitle">
+                <strong>&ltbody&gt</strong>
+            </p>
+            <p class="topic_content">
+                E dentro da tag body colocamos todo o conteúdo visível ao usuário: textos, imagens, vídeos.        
+            </p>
+        </article>
+        <article class="topic">
+            <header>
+                <h3 class="topic_title">Semântica</h3>
+            </header>
+            <p class="topic_content">
+                A semântica nos permite descrever mais precisamente o nosso conteúdo, agora um bloco de texto não é apenas uma div, agora é um article e tem mais significado assim. E temos vários elementos para ressignificar as divs:        
+            </p>
+            <p class="topic_subtitle">
+                <strong>&ltsection&gt</strong>
+            </p>
+            <p class="topic_content">
+                Representa uma seção genérica de conteúdo quando não houver um elemento mais específico para isso.     
+            </p>
+            <p class="topic_subtitle">
+                <strong>&ltheader&gt</strong>
+            </p>
+            <p class="topic_content">
+                É o cabeçalho da página ou de uma seção da página e normalmente contém logotipos, menus, campos de busca.   
+            </p>
+            <p class="topic_subtitle">
+                <strong>&ltarticle&gt</strong>
+            </p>
+            <p class="topic_content">
+                Representa um conteúdo independente e de maior relevância dentro de uma página, como um post de blog, uma notícia em uma barra lateral ou um bloco de comentários. Um article pode conter outros elementos, como header, cabeçalhos, parágrafos e imagens.       
+            </p>
+            <p class="topic_subtitle">
+                <strong>&ltaside&gt</strong>
+            </p>
+            <p class="topic_content">
+                É uma seção que engloba conteúdos relacionados ao conteúdo principal, como artigos relacionados, biografia do autor e publicidade. Normalmente são representadas como barras laterais. 
+            </p>
+            <p class="topic_subtitle">
+                <strong>&ltfooter&gt</strong>
+            </p>
+            <p class="topic_content">
+                Esse elemento representa o rodapé do conteúdo ou de parte dele, pois ele é aceito dentro de vários elementos, como article e section e até do body. Exemplos de conteúdo de um &ltfooter&gt são informações de autor e links relacionados.
+            </p>
+            <p class="topic_subtitle">
+                <strong>&lth1&gt-&lth6&gt</strong>
+            </p>
+            <p class="topic_content">
+                Eles não foram criados na versão 5 do HTML e nem são específicos para semântica, mas servem para esse propósito. São utilizados para marcar a importância dos títulos, sendo &lth1&gt o mais importante e &lth6&gt o menos. Uma dica: use apenas um &lth1&gt por página, pois ele representa o objetivo da sua página.
+            </p> 
+        </article>
+        <header>
+            <h2 class="subtitle">CSS3</h2>
+        </header>
+        <article class="topic">
+            <header>
+                <h3 class="topic_title">Definição e seletores</h3>
+            </header>
+            <p class="topic_content">
+                Após a criação do HTML a necessidade de formatar as páginas ficou evidente, assim, em 1996, foi criada a linguagem de estilo que conhecemos por CSS.
+            </p>
+            <p class="topic_content">
+                A sintaxe é bem simples e pode ser explicada com a frase "você cria regras de estilo para elementos ou grupos de elementos".
+            </p>
+            <p class="topic_content">
+                Uma regra CSS é representada por um seletor ou um grupo de seletores, então dentro de um par de chaves adicionamos as declarações. As declarações são formadas por uma propriedade e um valor.       
+            </p>
+        </article>
+        <article class="topic">
+            <header>
+                <h3 class="topic_title">ID x Classe</h3>
+            </header>
+            <p class="topic_content">
+                <strong>ID:</strong> é representado pelo símbolo # (hash) seguido de um nome para esse ID.
+            </p>
+            <p class="topic_content">
+                <strong>Classe:</strong> a classe é representada de forma parecida do ID, mas é precedida por um ponto em vez do hash.
+            </p>
+            <p class="topic_content">
+                E a diferença mais importante entre eles é a forma como devem ser usados: o ID só pode ser usado uma vez em uma página HTML enquanto a classe não tem restrições.       
+            </p>
+        </article>
+        <article class="topic">
+            <header>
+                <h3 class="topic_title">Box-model</h3>
+            </header>
+            <p class="topic_content">
+                Quando estamos criando o layout de um site o navegador representa cada elemento HTML  como uma caixa retangular, isso é o box-model. E com CSS nós alteramos a aparência dessa caixa (largura, altura, cor de fundo, etc.). Essa caixa é composta por 4 áreas: o conteúdo, o padding, a borda e a margem.    
+            </p>
+            <ul class="topic_content_list">
+                <li>
+                    As margens (margin) são espaçamentos entre elementos;
+                </li>
+                <li>
+                    As bordas (border);
+                </li>
+                <li>
+                    O padding é um espaçamento entre as bordas e o conteúdo, a diferença para as margens é que declarações de imagem de fundo funcionam nele;
+                </li>
+                <li>
+                    O conteúdo (content) é o que o seu bloco representa, um texto, uma imagem, um vídeo;
+                </li>
+            </ul>
+        </article>
+    </section>
+    <footer>
+        <h3>Contato</h3>
+        <ul>
+            <li>
+                <a href="mailto:pedro.anastacio013@gmail.com">
+                    <img src="img/gmail-logo.png" alt="Logo do Gmail"/>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/pedro-anast%C3%A1cio-69559a222/" target="_blank">
+                    <img src="img/linkedin-logo.svg" alt="Logo do LikedIn"/>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/pedroanastacio/" target="_blank">
+                    <img src="img/github-logo.png" alt="Logo do GitHub"/>
+                </a>
+            </li>
+        </ul>
+        <div class="dev_info">
+            <span>&copy Desenvolvido por Pedro Anastácio</span>
+        </div>
+  
+    </footer>
+</body>
+</html>
