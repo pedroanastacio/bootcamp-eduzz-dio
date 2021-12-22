@@ -3,15 +3,16 @@
 ![Ciclo de vida de um componente React](https://hackernoon.com/hn-images/1*sn-ftowp0_VVRbeUAFECMA.png)
 
 Conforme mostra a imagem acima, um componente React passa pelas seguintes fases:
- - Inicialização;
- - Montagem;
- - Atualização;
- - Desmontagem;
+ 1.  Inicialização;
+ 2.  Montagem;
+ 3.  Atualização;
+ 4.  Desmontagem;
  
- ### Inicialização
+ ### 1 - Inicialização
 Fase onde o componente React se prepara par montagem, configurando os estados inicias e props padrão, caso haja.
 
-### Montagem
+
+### 2 - Montagem
 Após a preparação com as necessidades básicas, estado e props, o componente React está pronto para ser montado no DOM do navegador.
 
  Esta fase fornece os seguintes métodos hooks para antes e depois da montagem dos componentes:
@@ -29,7 +30,8 @@ Após a preparação com as necessidades básicas, estado e props, o componente 
     - Como, neste método, podemos acessar o DOM, devemos inicializar as bibliotecas JS como o Jquery que precisam acessar o DOM.  
      - **Uso:** Este é o método certo para integrar com bibliotecas Javascript de terceiros e também para fazer chamadas de API.
  
-### Atualização
+ 
+### 3 - Atualização
 Esta fase começa quando o componente react nasce no navegador e recebe novas atualizações. O componente pode ser atualizado de duas maneiras, enviando novas props ou atualizando o estado.  
 
 Quando o estado é atualizado através do setState, temos os seguintes métodos hooks:
@@ -55,8 +57,9 @@ Todos os métodos mostrados anteriormente se comportam da mesma forma, tanto par
 	 -  O método semelhante para o estado não existe antes da mudança de estado porque as props são lidas apenas dentro de um componente e nunca podem ser dependentes do estado.  
 	 - **_Uso:_** é assim que o estado pode ser mantido sincronizado com as novas props.
 	
-	### Desmontagem
-	Nesta fase, o componente não é necessário e então será desmontado do DOM. O seguinte método é chamado nesta fase:
+	
+### 4 - Desmontagem
+Nesta fase, o componente não é necessário e então será desmontado do DOM. O seguinte método é chamado nesta fase:
  - **componentWillUnmount**:
 	  - Este método é o último método no ciclo de vida. Isso é executado pouco antes de o componente ser removido do DOM. 
 	 - **Uso:** Neste método, fazemos todas as limpezas relacionadas ao componente. Por exemplo, no logout, os detalhes do usuário e todos os tokens de autenticação podem ser apagados antes de desmontar o componente principal.
