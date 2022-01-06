@@ -1,4 +1,4 @@
-Autenticação com JWT
+# Gerenciamento e Autenticação de usuários com JWT
 
 Projeto desenvolvido durante o curso de Microserviços com Node.js.
 
