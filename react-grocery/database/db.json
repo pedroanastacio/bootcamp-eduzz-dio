@@ -1,0 +1,84 @@
+{
+    "categories": [
+        {
+            "id": 1,
+            "name": "Frutas"
+        },
+        {
+            "id": 2,
+            "name": "Verduras"
+        }
+    ],
+    "products": [
+        { 
+            "id": 1,
+            "name": "Abacaxi",
+            "price": 5.40,
+            "categoryId": 1,
+            "image":  "https://cd.shoppub.com.br/cenourao/media/cache/7d/dc/7ddcf04db9666b50ce4a4d43c23177eb.png"     
+        }, 
+        { 
+            "id": 2,
+            "name": "Maçã",
+            "price": 2.50,
+            "categoryId": 1,
+            "image":  "https://hiperideal.vteximg.com.br/arquivos/ids/167706-1000-1000/56383.jpg?v=636615816296530000"        
+        },
+        { 
+            "id": 3,
+            "name": "Laranja",
+            "price": 1,
+            "categoryId": 1,
+            "image": "https://thumbs.dreamstime.com/b/uma-laranja-inteira-com-folha-isolada-no-branco-108987118.jpg"       
+        },
+        {
+            "id": 4,
+            "name": "Limão",
+            "price": 0.5,
+            "categoryId": 1,
+            "image": "https://a-static.mlcdn.com.br/618x463/limao-taiti/fruitexpress/7d56f96ccb0311ebb1524201ac18500e/a3c3b0771bbaea7fc6a9b7a011fabdc3.jpg"   
+        },
+        {
+            "id": 5,
+            "name": "Uva",
+            "price": 4.90,
+            "categoryId": 1,
+            "image": "https://hortadobairro.pt/wp-content/uploads/2020/07/uva-cardinal.jpg"   
+        },
+        {
+            "id": 6,
+            "name": "Alface",
+            "price": 2.20,
+            "categoryId": 2,
+            "image": "https://cdn.awsli.com.br/600x700/1578/1578261/produto/60428322/fe0c239205.jpg"
+        },
+        {
+            "id": 7,
+            "name": "Brócolis",
+            "price": 3.99,
+            "categoryId": 2,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS4VjOJbEnYiwNoIWzeCUIdMM52-gcin3Oud1XbLcEXzCNJaPWQTMXEXjQGFNtQNEglMc&usqp=CAU"
+        },
+        {
+            "id": 8,
+            "name": "Couve-flor",
+            "price": 5.00,
+            "categoryId": 2,
+            "image": "https://hiperideal.vteximg.com.br/arquivos/ids/167871-1000-1000/227137.jpg?v=636615816845330000"
+        },
+        {
+            "id": 9,
+            "name": "Espinafre",
+            "price": 1.50,
+            "categoryId": 2,
+            "image": "https://cd.shoppub.com.br/cenourao/media/cache/ca/ad/caad7623639e488f1f81be9d35ab7625.jpg"
+        },
+        {
+            "id": 10,
+            "name": "Alcachofra",
+            "price": 8.20,
+            "categoryId": 2,
+            "image": "https://www.exotic-seeds.store/10525-large_default/sementes-de-alcachofra-verde.jpg"
+        }
+    ]
+}
