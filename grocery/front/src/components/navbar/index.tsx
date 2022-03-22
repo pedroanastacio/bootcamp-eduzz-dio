@@ -1,5 +1,5 @@
 import React, { memo, useCallback, useState } from 'react';
-import { Typography, Badge, IconButton, Avatar, Fab } from '@mui/material';
+import { Typography, Badge, IconButton } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
 import * as S from './style';
 import { PageLink } from '..';
@@ -7,8 +7,7 @@ import IPage from '../../interfaces/page';
 import Drawer from './drawer';
 import { useSelector } from 'react-redux';
 import { selectorIsAuthenticated } from '../../store/selectors';
-import { store } from '../../store';
-import UserPopover from './user-popover';
+import UserMenu from './user-menu';
 
 export const pages = [
 	{
@@ -26,8 +25,6 @@ const NavBar: React.FC = () => {
 	const [showDrawer, setShowDrawer] = useState<boolean>(false);
 	const navigate = useNavigate();
 	const isAuthenticated = useSelector(selectorIsAuthenticated);
-	const user = store.getState().user.value;
-	const [popoverAnchor, setPopoverAnchor] = useState<HTMLButtonElement | null>(null);
 
 	const renderPageLinks = useCallback((page: IPage, index: number) => {
 		return (
@@ -42,17 +39,11 @@ const NavBar: React.FC = () => {
 		setShowDrawer(status);
 	}, []);
 
-	const handleAvatarClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-		setPopoverAnchor(event.currentTarget);
-	};
 
 	const UserLoggedIn = useCallback(() => {
 		if (isAuthenticated) {
 			return (
-				<button onClick={handleAvatarClick}>
-					<Avatar sx={{ bgcolor: 'primary.dark' }}>{user.name.charAt(0)}</Avatar>
-					<UserPopover anchor={popoverAnchor} setAnchor={setPopoverAnchor} />
-				</button>
+				<UserMenu />
 			);
 		}
 		else {
@@ -66,7 +57,7 @@ const NavBar: React.FC = () => {
 				</S.WrapperLoginButton>
 			);
 		}
-	}, [isAuthenticated, user]);
+	}, [isAuthenticated]);
 
 	return (
 		<>

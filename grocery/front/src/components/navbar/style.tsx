@@ -76,7 +76,7 @@ export const WrapperStorefront = styled(Storefront)`
 export const WrapperShoppingBasket = styled(ShoppingBasket)`
     color: ${props => props.theme.palette.secondary.contrastText};
     font-size: 35px !important;
-    margin-right: 10px;
+    margin-right: 20px;
 `;
 
 export const WrapperLoginButton = styled(Button)`
